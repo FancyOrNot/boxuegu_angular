@@ -5,7 +5,7 @@ angular.module('web_api',[])
         method:'post'
     },
     logout:{
-       url:'/api/loginout',
+       url:'/api/logout',
         method:'post'
     }
 })

@@ -10,6 +10,12 @@ angular.module('app',['ngRoute','aside','header','index','login','http','api','w
             .when('/login',{
                 template:'<ngl-login></ngl-login>',
             })
+            .when('/profile',{
+                template:'<ngl-profile></ngl-profile>',
+            })
+            .when('/repass',{
+                template:'<ngl-repass></ngl-repass>',
+            })
             .otherwise({
                 templateUrl:'/src/html/404.html'
             })
