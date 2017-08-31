@@ -1,0 +1,11 @@
+angular.module('web_api',[])
+.constant('WEB_API',{
+    login:{
+        url:'/api/login',
+        method:'post'
+    },
+    logout:{
+       url:'/api/loginout',
+        method:'post'
+    }
+})
