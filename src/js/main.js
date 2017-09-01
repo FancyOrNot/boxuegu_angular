@@ -1,4 +1,4 @@
-angular.module('app',['ngRoute','aside','header','index','login','profile','repass','http','api','web_api'])
+angular.module('app',['ngRoute','course','aside','header','index','login','profile','repass','http','api','web_api'])
     .config(['$routeProvider',function($routeProvider){
         $routeProvider
             .when('/',{
@@ -11,10 +11,25 @@ angular.module('app',['ngRoute','aside','header','index','login','profile','repa
                 template:'<ngl-login></ngl-login>',
             })
             .when('/profile',{
-                template:'<ngl-profile></ngl-profile>',
+                template:'<ngl-aside></ngl-aside><ngl-profile></ngl-profile>',
             })
             .when('/repass',{
                 template:'<ngl-repass></ngl-repass>',
+            })
+            .when('/course/add',{
+                template:'<ngl-aside/><ngl-cs-add/>',
+            })
+            .when('/course/list',{
+                template:'<ngl-aside/><ngl-cs-list/>',
+            })
+            .when('/course/edit1',{
+                template:'<ngl-aside/><ngl-cs-edit1/>',
+            })
+            .when('/course/edit1',{
+                template:'<ngl-aside/><ngl-cs-edit2/>',
+            })
+            .when('/course/edit1',{
+                template:'<ngl-aside/><ngl-cs-edit3/>',
             })
             .otherwise({
                 templateUrl:'/src/html/404.html'
